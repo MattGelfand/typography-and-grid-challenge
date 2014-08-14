@@ -1,7 +1,7 @@
 /* ============================================================================================== */
 /* Reset Styles                                                                                   */
 /* ============================================================================================== */
-* {
+*, *:before, *:after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -14,8 +14,8 @@
 /* ============================================================================================== */
 
 body {
-  font-family: serif;
   font-size: 100%;
+  font-weight: 100;
 }
 
 p {
@@ -43,7 +43,8 @@ small {
 }
 
 a {
-  color: blue;
+  color: #adadad;
+  text-decoration: none;
 }
 
 h1,
@@ -63,6 +64,7 @@ ul,
 ol {
   padding: 0;
   margin: 0 0 0 1em;
+  list-style-type: none;
 }
 
 ul ul,
@@ -90,15 +92,145 @@ sub {
   bottom: -0.25em;
 }
 
+
+
 /* ============================================================================================== */
 /* Demo Styles - Do most of your work here.                                                       */
 /* ============================================================================================== */
 
 
+article {
+  margin: 0 auto;
+  background: #fff;
+}
+
+section, .row {
+  margin: 1.6em 0;
+  overflow: hidden;
+}
+
+.contain {
+  margin: 0 auto;
+}
+
+ul {
+  background: green;
+}
+
+p {
+  margin:0.8em 0 1.6em 0;
+  font-size: 1.125rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+header {
+background: url('../img/gill-sans-background-2.jpg') no-repeat fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+padding:7em 0;
+background-position: 0 30%;
+}
+
+.header-inner {
+  text-align: center;
+  color:#FF3333;
+}
+
+header h1 {
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 1.6em;
+  font-family: "bree";
+  
+}
+
+h2 {
+  text-align: center;
+  border-bottom: 1px solid #FF3333;
+  margin:0 auto;
+  padding: 0 0 .8em 0;
+  width: 10%;
+  color: #FF3333;
+}
+
+h3 {
+  background: aqua;
+}
+
+figure {
+  background: brown;
+}
+
+nav {
+  background-color: orange;
+}
+
+nav li {
+  font-size: 40px;
+}
+
+.images {
+  float: left;
+}
+
+.column .sub-nav {
+  display: none;
+}
+
+.column .visible {
+  display: block;
+}
+
+
+
+/* ============================================================================================== */
+/* Media Queries                                                                                  */
+/* ============================================================================================== */
+
+/* Small screens (default) */
+html { font-size: 100%; }
+ 
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) { 
+  html { 
+    font-size: 112%; 
+  }
+
+   .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 25%; }
+  .column.flow-opposite { float: right; }  
+}
+ 
+/* Large screens (1024px) */
+@media (min-width: 64rem) { 
+  html { font-size: 120%; }
+
 
 
 
 /* Clearfix class =============================================================================== */
-.clearfix { *zoom: 1; }
-.clearfix:before, .clearfix:after { content: " "; display: table; }
-.clearfix:after { clear: both; }
+.clearfix { 
+  *zoom: 1; 
+}
+
+.clearfix:before, .clearfix:after { 
+  content: " "; 
+  display: table; 
+}
+
+.clearfix:after { 
+  clear: both; 
+}
