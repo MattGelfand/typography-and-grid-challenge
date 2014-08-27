@@ -35,13 +35,11 @@ small {
 }
 
 a {
-  color: #FF3333;
-  text-decoration: none;
-  opacity: .7;
+  color: black;
 }
 
 a:hover {
-  opacity: 1;
+  text-decoration: underline;
 }
 
 h1,
@@ -97,27 +95,33 @@ sub {
 /* ============================================================================================== */
 
 .contain {
-  padding:0 3em;
+  padding: 0 1em;
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 article {
-  margin:0 auto;
-  background: #fff;
   overflow-x:hidden;
 }
 
 section {
+  margin-bottom: 3.375rem; 
+  margin-top: 1.6875rem;
+  padding: 5.0625rem 0 3.375rem 0; 
+}
 
+section:nth-child(even) {
+  background: #ff3333;
 }
 
 header {
-background: url('../img/Cornwall_103.jpg') no-repeat fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-padding:7em 0;
-background-position: 0 30%;
+  background: url('../img/Cornwall_103.jpg') no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 45% 30%;
+  padding:4.75rem 0;
 }
 
 .header-inner {
@@ -127,12 +131,12 @@ background-position: 0 30%;
 }
 
 h1 {
-  font-weight: 300;
+  font-weight: 800;
   font-family: "jaf-lapture-display";
-  border-bottom:1px solid #fff;
   margin:0 auto;
-
-  font-size: 7rem;
+  font-size: 4.75rem;  
+  line-height: 5.0625rem;  
+  margin-bottom: 1.6875rem;  
 }
 
 h2 {
@@ -141,40 +145,41 @@ h2 {
   font-family: "prenton";
   text-transform: uppercase;
   font-weight: 800;
-  
-  font-size: 4.5rem;
+  font-size: 2.9375rem;  
+  line-height: 5.0625rem;  
+  margin-top: -3.375rem; 
+  margin-bottom: 1.6875rem; 
 }
 
 h3 {
-  font-family: "prenton";
   text-transform: uppercase;
-  color: #FF3333;
-  border-right:2px solid #ededed;
+  letter-spacing: .1em;
   font-weight: 800;
   text-align: left;
-
-  font-size: 3.5rem;
+  font-size: 1.8125rem;  
+  line-height: 3.375rem;  
+  margin-bottom: 0.84375rem;
+  font-family: "prenton";  
 }
 
 h4 {
-  text-transform:uppercase;
-  opacity: .8;
-  font-weight: 800;
-
-  font-size: 2.25rem;
+  font-weight: 300;
+  font-size: 1.8125rem;    /* 18px */ 
+  line-height: 2.25rem; 
+  margin-top: 1.6875rem; 
+  font-family: "prenton";
 }
 
 h5 {
   font-style: italic;
   font-family: "jaf-lapture";
-  padding:.5em 0;
-
-  font-size: 1.75rem;
+  font-size: 1.8125rem;  /* 18px */ 
+  line-height: 1.6875rem;  
+  margin-bottom: 1.6875rem;
+  font-weight: lighter;
+  margin-top: 3.375rem;  
 }
 
-h6 {
-  font-size: 1.125rem;
-}
 
 p {
   -webkit-hyphens: auto;
@@ -184,22 +189,41 @@ p {
   color:#222;
   font-weight: 300;
   font-family: "jaf-lapture";
-  font-size: 1.125rem;
-  line-height: 1.5;
+  font-size: 1.125rem;  /* 18px */
+  line-height: 1.6875rem; /* 27px */
+  margin-bottom: 1.6875rem; 
 }
+
 
 .toc-level-1 a {
-  color:#222;
+  color: white;
   font-family: "prenton";
-  font-variant: small-caps;
+  opacity: 1;
+  text-decoration: none;
 }
 
-figure {
-
+.toc-level-2 {
+  border: none;
+  background: none;
+  margin-top: -1.6875rem;
 }
+
+.sub-nav {
+  margin-top: 1.6875rem;
+}
+
+li.toc-level-2 a:hover {
+  color:#FF3333;
+}
+
+li.toc-level-2 a {
+  font-size: 1.125rem;
+  text-transform: none;
+}
+
 
 footer {
-  background: yellow;
+  background: #FF3333;
 }
 
 footer li {
@@ -209,56 +233,75 @@ footer li {
   font-style: italic;
 }
 
+footer small {
+  display: none;
+}
+
 nav {
-text-align: center;
-margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
 }
 
 nav li {
-  float: left;
+  text-align: left;
+  font-size: 1.8125rem; /* 29px */
+  background: #FF3333;
+  border: 1px solid white;
+  padding-top: 0.84375rem; /* 27px */
+  padding-bottom: 0.84375rem; /* 27px */
+  font-weight: 500;
+  font-family: 'jaf-lapture';
+  text-transform: uppercase;
 }
 
 .nested-nav li {
-  color:grey;
+  font-weight: bold;
+  font-size: 1.125rem;  /* 18px */
+  line-height: 1.6875rem; /* 27px */
+  margin-bottom: 1.6875rem; /* 13.5px */
+  margin-left: 0.84375rem;
+  font-family: 'jaf-lapture';
   font-style: italic;
+  list-style-type: disc;
 }
 
-
-.images {
-
-  }
-
-.column .sub-nav {
+/*.column .sub-nav {
   display: none;
 }
 
 .column .visible {
   display: block;
 }
+*/
 
-#sculpture {
-  background: url('../img/downchev.png') center center no-repeat;
-  background-position: 590px 15px;
+.sub-head {
+  color:#fff;
+  text-decoration: none;
 }
 
-#midland-hotel-morecambe{
-  background: url('../img/downchev.png') center center no-repeat;
-  background-position: 475px 15px;
+hr {
+  width: 12%;
+  margin: 0 auto;
 }
 
-#typefaces-and-inscriptions {
-  background: url('../img/downchev.png') center center no-repeat;
-  background-position: 475px 15px;
+figure {
+  position: relative;
+  margin-bottom: 1.6875rem;
+  margin-top: 0.84375rem;
 }
 
-#published-writings {
-  background: url('../img/downchev.png') center center no-repeat;
-  background-position: 340px 15px;
+figcaption {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  color:#fff;
+  font-style: italic;
 }
 
-#contributions {
-  background: url('../img/downchev.png') center center no-repeat;
-  background-position: 240px 15px;
+figcaption a {
+  text-decoration: none;
+  color: #fff;
 }
 
 
@@ -308,8 +351,78 @@ html { font-size: 100%;
   } 
 
   p {
-    line-height: 1.6;
-  } 
+    line-height: 1.5;
+  }
+
+  header {
+    height: 100vh;
+  }
+
+  .header-inner {
+    height: 300px;
+    width: 400px;
+    position:absolute;
+    left:61%;
+    top:35%;
+    margin:-150px 0 0 -400px;
+  }
+
+  h1 {
+    font-size: 11.6rem;
+    line-height: 11.75rem;  
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    border-right:2px solid #ededed;
+    padding-right: 1.6875rem;
+  }
+
+  h5 {
+    font-size: 1.8125rem; 
+    font-weight: lighter;
+    margin-top: 0;
+  }
+
+  nav li {
+    float: left;
+    margin-left: 3.9rem;
+    padding: 0;
+    border: none;
+    font-size: 1.125rem;
+  }
+
+  .table-of-contents ul {
+    margin-left: 10.5rem;
+  }
+
+  li.toc-level-1 {
+    background: none;
+  }
+
+  li.toc-level-1 a {
+    color: #cfcfcf;
+    font-weight: 100;
+  }
+
+  li.toc-level-1 a:hover {
+    color: #ff3333;
+  }
+
+  .images {
+    
+  }
+
+  figure {
+     
+  }
+  
+  figcaption {
+    right: 10%;
+  }
 }
  
 /* Large screens (1024px) */
